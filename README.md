@@ -1,4 +1,4 @@
-# NAYA Corp Website
+# Naya Corp Website
 
 现代化科技企业官网全栈项目，面向 B 端客户展示公司介绍、业务服务、项目案例、核心团队、博客资讯与联系方式。项目采用深蓝与浅紫商务科技视觉，支持响应式布局、浅色/暗色主题与克制的滚动动效。
 
@@ -16,7 +16,8 @@
 ## 目录结构
 
 ```text
-NAYA-corp-website/
+
+naya-website/
 ├── backend/
 │   ├── src/
 │   │   ├── modules/
@@ -98,7 +99,7 @@ cp backend/.env.example backend/.env
 cp frontend/.env.example frontend/.env
 ```
 
-默认后端地址为 `http://localhost:3001/api`，前端地址为 `http://localhost:3000`。如果修改端口或使用域名，请同步调整两侧配置。
+默认后端地址为 `http://localhost:3002/api`，前端地址为 `http://localhost:3003`。如果修改端口或使用域名，请同步调整两侧配置。
 
 ### 4. 初始化数据库与示例内容
 
@@ -123,16 +124,20 @@ pnpm dev
 ```bash
 # 终端一：后端
 pnpm --filter ./backend dev
+#从 backend 文件夹直接打开终端
+pnpm dev
 
 # 终端二：前端
 pnpm --filter ./frontend dev
+#从 frontend 文件夹直接打开终端
+pnpm dev -p 3003
 ```
 
 启动后访问：
 
-- 官网：<http://localhost:3000>
-- Swagger 文档：<http://localhost:3001/api/docs>
-- 健康检查：<http://localhost:3001/api/health>
+- 官网：<http://localhost:3003>
+- Swagger 文档：<http://localhost:3002/api/docs>
+- 健康检查：<http://localhost:3002/api/health>
 
 ## 常用命令
 
