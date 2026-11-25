@@ -18,7 +18,7 @@ export class ContactInfo {
   @ApiProperty({ example: '400-860-2026' })
   phone!: string;
 
-  @ApiProperty({ example: 'hello@novacorp.cn', format: 'email' })
+  @ApiProperty({ example: 'hello@nayacorp.cn', format: 'email' })
   email!: string;
 
   @ApiProperty({ example: '周一至周五 09:00–18:00' })
@@ -29,7 +29,7 @@ export class SocialLink {
   @ApiProperty({ example: 'LinkedIn' })
   label!: string;
 
-  @ApiProperty({ example: 'https://www.linkedin.com/company/nova-corp', format: 'uri' })
+  @ApiProperty({ example: 'https://www.linkedin.com/company/naya-corp', format: 'uri' })
   href!: string;
 
   @ApiProperty({ example: 'linkedin' })

@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-const siteName = process.env.NEXT_PUBLIC_SITE_NAME || 'Nova Corp';
+const siteName = process.env.NEXT_PUBLIC_SITE_NAME || 'Naya Corp';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

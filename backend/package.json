@@ -1,8 +1,8 @@
 {
-  "name": "nova-corp-backend",
+  "name": "NAYA-corp-backend",
   "version": "1.0.0",
   "private": true,
-  "description": "Nova Corp public website API",
+  "description": "NAYA Corp public website API",
   "license": "MIT",
   "packageManager": "pnpm@10.11.1",
   "engines": {

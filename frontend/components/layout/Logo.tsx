@@ -15,7 +15,7 @@ export function Logo({
     <Link
       href="/"
       onClick={onClick}
-      aria-label="Nova Corp 首页"
+      aria-label="NAYA Corp 首页"
       className={cn(
         'inline-flex items-center gap-2.5 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
         className,
@@ -28,7 +28,7 @@ export function Logo({
           inverted ? 'text-white' : 'text-foreground',
         )}
       >
-        NOVA <span className={inverted ? 'text-lavender-200' : 'text-primary'}>CORP</span>
+        NAYA <span className={inverted ? 'text-lavender-200' : 'text-primary'}>CORP</span>
       </span>
     </Link>
   );

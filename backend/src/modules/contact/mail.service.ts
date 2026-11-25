@@ -84,7 +84,7 @@ export class MailService implements OnModuleInit, OnModuleDestroy {
         from: this.from,
         to: this.to,
         replyTo: message.email,
-        subject: `【Nova Corp 官网咨询】${cleanHeader(message.subject ?? '新的联系请求')}`,
+        subject: `【Naya Corp 官网咨询】${cleanHeader(message.subject ?? '新的联系请求')}`,
         text: [
           `姓名：${message.name}`,
           `邮箱：${message.email}`,
@@ -95,7 +95,7 @@ export class MailService implements OnModuleInit, OnModuleDestroy {
         ].join('\n'),
         html: `
           <div style="font-family:Arial,sans-serif;color:#172033;line-height:1.7">
-            <h2>Nova Corp 官网联系请求</h2>
+            <h2>Naya Corp 官网联系请求</h2>
             <p><strong>姓名：</strong>${name}</p>
             <p><strong>邮箱：</strong>${email}</p>
             <p><strong>电话：</strong>${phone}</p>

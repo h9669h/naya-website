@@ -6,7 +6,7 @@ import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
 
 const themes = [
-  { value: 'system', label: '跟随系统', icon: Monitor },
+  // { value: 'system', label: '跟随系统', icon: Monitor },
   { value: 'light', label: '切换为浅色模式', icon: Sun },
   { value: 'dark', label: '切换为深色模式', icon: Moon },
 ] as const;

@@ -11,7 +11,8 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "sourceMap": true,
-    "outDir": "./dist",
+    "rootDir": "./src", //指定源码根目录，有outDir，就必须要有这个
+    "outDir": "./dist", //编译后输出到dist
     "incremental": true,
     "strict": true,
     "strictNullChecks": true,

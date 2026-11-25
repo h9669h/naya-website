@@ -12,7 +12,7 @@ export class HomeContentDto {
   @ApiProperty({ example: 'home' })
   key!: string;
 
-  @ApiProperty({ example: 'NOVA CORP · 企业数字化伙伴' })
+  @ApiProperty({ example: 'NAYA CORP · 企业数字化伙伴' })
   eyebrow!: string;
 
   @ApiProperty({ example: '让复杂业务，' })

@@ -14,7 +14,7 @@ export function CompanyIntro({ content }: { content: HomeContent }) {
               <div className="relative flex h-full flex-col justify-between">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-                    Nova Corp
+                    Naya Corp
                   </span>
                   <span className="rounded-full border border-border bg-background/70 px-3 py-1 text-[10px] text-muted-foreground">
                     Company profile
@@ -38,7 +38,7 @@ export function CompanyIntro({ content }: { content: HomeContent }) {
 
           <Reveal delay={0.08}>
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">
-              关于 Nova
+              关于 Naya
             </p>
             <h2 className="mt-4 text-balance text-3xl font-semibold tracking-[-0.035em] sm:text-4xl lg:text-[2.8rem] lg:leading-[1.16]">
               {content.introTitle}

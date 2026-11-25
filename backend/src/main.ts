@@ -89,8 +89,8 @@ const bootstrap = async (): Promise<void> => {
   if (config.getOrThrow<boolean>('swaggerEnabled')) {
     const { DocumentBuilder, SwaggerModule } = await import('@nestjs/swagger');
     const documentConfig = new DocumentBuilder()
-      .setTitle('Nova Corp API')
-      .setDescription('Nova Corp 企业官网公开 API')
+      .setTitle('NAYA Corp API')
+      .setDescription('NAYA Corp 企业官网公开 API')
       .setVersion('1.0.0')
       .addTag('home', '首页内容')
       .addTag('services', '解决方案')
@@ -104,10 +104,15 @@ const bootstrap = async (): Promise<void> => {
 
     SwaggerModule.setup(`${prefix}/docs`, app, document);
   }
+  // 解决跨域问题
+  app.enableCors({
+    origin: 'http://localhost:3003',
+    credentials: true,
+  });
 
   await app.listen(port, '0.0.0.0');
   const logger = new Logger('Bootstrap');
-  logger.log(`Nova Corp API listening on http://localhost:${port}/${prefix}`);
+  logger.log(`NAYA Corp API listening on http://localhost:${port}/${prefix}`);
 };
 
 void bootstrap();

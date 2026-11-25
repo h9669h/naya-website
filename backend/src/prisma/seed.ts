@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 
 const home = {
   key: 'home',
-  eyebrow: 'NOVA CORP · 企业数字化伙伴',
+  eyebrow: 'NAYA CORP · 企业数字化伙伴',
   headline: '让复杂业务，',
   highlightedHeadline: '进化得更简单。',
   subheadline:
@@ -16,7 +16,7 @@ const home = {
   secondaryCtaHref: '/services',
   introTitle: '以工程确定性，交付业务增长',
   introBody:
-    'Nova Corp（诺瓦科技）是一家专注于企业级软件、云与人工智能的技术服务公司。我们相信，真正有效的数字化不是堆叠技术，而是让战略、产品、数据和组织形成同一条价值链。从业务诊断到平台落地，从首个试点到规模化运营，我们的跨职能团队始终与客户共同承担结果，用清晰的架构、可靠的交付和可持续的治理，让每一次技术投入都转化为可衡量的经营价值。',
+    'Naya Corp（诺瓦科技）是一家专注于企业级软件、云与人工智能的技术服务公司。我们相信，真正有效的数字化不是堆叠技术，而是让战略、产品、数据和组织形成同一条价值链。从业务诊断到平台落地，从首个试点到规模化运营，我们的跨职能团队始终与客户共同承担结果，用清晰的架构、可靠的交付和可持续的治理，让每一次技术投入都转化为可衡量的经营价值。',
   mission: '以领先而务实的技术能力，帮助企业把复杂问题转化为清晰、可执行、可持续的增长路径。',
   vision:
     '成为企业最值得信赖的长期数字化伙伴，让每一个组织都能借助云、数据与 AI，释放更大的商业潜能。',
@@ -30,7 +30,7 @@ const home = {
     address: '上海市浦东新区张江高科技园区科苑路 88 号 8 号楼 12 层',
     addressEn: '12F, Building 8, 88 Keyuan Road, Zhangjiang, Shanghai, China',
     phone: '400-860-2026',
-    email: 'hello@novacorp.cn',
+    email: 'hello@nayacorp.cn',
     workingHours: '周一至周五 09:00–18:00（法定节假日除外）',
   },
   socialLinks: [
@@ -47,7 +47,7 @@ const services = [
     slug: 'cloud-native',
     title: '云原生架构升级',
     shortDescription: '构建弹性、可观测、可持续演进的企业技术底座。',
-    description: `## 让基础设施成为业务加速器
+    description: ` 让基础设施成为业务加速器
 
 云原生不是一次服务器迁移，而是研发效率、系统韧性与成本结构的系统性升级。我们从业务负载和现有资产出发，设计渐进式演进路线，避免为了技术而技术。
 
@@ -87,7 +87,7 @@ const services = [
     slug: 'data-intelligence',
     title: '数据智能与决策',
     shortDescription: '打通数据孤岛，让可信数据成为经营决策的共同语言。',
-    description: `## 从数据资产到经营洞察
+    description: ` 从数据资产到经营洞察
 
 分散在业务系统、设备与协作工具中的数据，只有进入稳定的治理和交付体系，才能真正支持决策。我们帮助企业建立从采集、建模到分析和应用的端到端能力。
 
@@ -121,9 +121,9 @@ const services = [
     slug: 'enterprise-ai',
     title: '企业级 AI 应用工程',
     shortDescription: '把大模型能力嵌入核心流程，构建可信、可控、可量产的 AI 产品。',
-    description: `## 从模型能力到业务结果
+    description: ` 从模型能力到业务结果
 
-我们关注的不只是模型效果，更是 AI 能否稳定融入真实工作流。Nova Corp 将产品设计、模型工程、知识工程与安全治理整合为一套可落地的方法。
+我们关注的不只是模型效果，更是 AI 能否稳定融入真实工作流。NAYA Corp 将产品设计、模型工程、知识工程与安全治理整合为一套可落地的方法。
 
 ### 应用场景
 
@@ -155,7 +155,7 @@ const services = [
     slug: 'security-resilience',
     title: '安全合规与业务韧性',
     shortDescription: '将安全嵌入产品与交付过程，让风险可见、可控、可恢复。',
-    description: `## 安全不是上线前的检查项
+    description: ` 安全不是上线前的检查项
 
 面对不断变化的威胁与合规要求，企业需要把安全能力融入架构、研发和运营的每一天。我们以风险和业务影响为起点，帮助客户建立主动防御体系。
 
@@ -180,7 +180,7 @@ const services = [
     slug: 'digital-products',
     title: '全渠道数字产品',
     shortDescription: '从用户洞察到体验交付，打造一致、易用、可持续迭代的产品。',
-    description: `## 用产品思维连接品牌与客户
+    description: ` 用产品思维连接品牌与客户
 
 优秀的数字体验来自对用户任务的深刻理解。我们的产品团队将研究、体验设计、前后端工程和增长运营连接起来，帮助企业在多个触点提供一致价值。
 
@@ -204,7 +204,7 @@ const services = [
     slug: 'workflow-automation',
     title: '智能流程自动化',
     shortDescription: '连接系统与人，让跨部门协作更透明、更高效。',
-    description: `## 消除流程中的等待与重复
+    description: ` 消除流程中的等待与重复
 
 当审批、数据同步和跨系统协作依赖人工搬运时，效率与准确性都会受到影响。我们从端到端流程视角出发，识别瓶颈并设计适度的自动化方案。
 
@@ -234,13 +234,13 @@ const cases = [
     industry: '智能制造',
     year: 2026,
     summary: '打通 12 个工厂的数据孤岛，建立实时运营与智能决策体系。',
-    description: `## 挑战
+    description: ` 挑战
 
 远航制造集团的设备、订单与质量数据分散在不同工厂和系统中，管理层难以及时掌握跨区域经营状况，异常分析高度依赖资深工程师。
 
 ## 方案
 
-Nova Corp 团队统一数据模型与关键指标，接入 MES、ERP 和物联网平台，建设实时湖仓一体底座，并为质量、生产和供应链团队提供差异化数据产品。
+Naya Corp 团队统一数据模型与关键指标，接入 MES、ERP 和物联网平台，建设实时湖仓一体底座，并为质量、生产和供应链团队提供差异化数据产品。
 
 ### 关键工作
 
@@ -352,7 +352,7 @@ Nova Corp 团队统一数据模型与关键指标，接入 MES、ERP 和物联�
 
 ## 方案
 
-Nova Corp 与客户运营团队共同定义约束规则，建设订单预测、车辆匹配和路径优化服务，并为调度员提供原因解释与人工调整能力。
+Naya Corp 与客户运营团队共同定义约束规则，建设订单预测、车辆匹配和路径优化服务，并为调度员提供原因解释与人工调整能力。
 
 ### 系统亮点
 

@@ -1,8 +1,8 @@
 {
-  "name": "nova-corp-website",
+  "name": "NAYA-corp-website",
   "version": "1.0.0",
   "private": true,
-  "description": "Nova Corp 现代化科技企业官网全栈项目",
+  "description": "Naya Corp 现代化科技企业官网全栈项目",
   "license": "MIT",
   "packageManager": "pnpm@10.11.1",
   "engines": {

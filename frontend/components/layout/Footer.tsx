@@ -11,7 +11,7 @@ import { Logo } from './Logo';
 export function Footer() {
   const { data, loading } = useHomeDashboard();
   const content = data?.content;
-  const siteName = process.env.NEXT_PUBLIC_SITE_NAME || 'Nova Corp';
+  const siteName = process.env.NEXT_PUBLIC_SITE_NAME || 'Naya Corp';
 
   return (
     <footer className="relative overflow-hidden bg-navy-950 text-white">

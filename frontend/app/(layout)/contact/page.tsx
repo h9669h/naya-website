@@ -83,7 +83,7 @@ function MapPlaceholder({ info }: { info: ContactInfo }) {
         <div className="flex items-start gap-3">
           <MapPin className="mt-0.5 size-4 shrink-0 text-primary" />
           <div>
-            <p className="text-sm font-medium">Nova Corp</p>
+            <p className="text-sm font-medium">Naya Corp</p>
             <p className="mt-1 text-xs leading-5 text-muted-foreground">{info.address}</p>
           </div>
         </div>
