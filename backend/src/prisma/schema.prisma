@@ -1,0 +1,144 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ContactStatus {
+  NEW
+  READ
+  ARCHIVED
+}
+
+model HomeContent {
+  id                   String   @id @default(uuid()) @db.Uuid
+  key                  String   @unique @default("home")
+  eyebrow              String
+  headline             String
+  highlightedHeadline  String
+  subheadline          String
+  primaryCtaLabel      String
+  primaryCtaHref       String
+  secondaryCtaLabel    String
+  secondaryCtaHref     String
+  introTitle           String
+  introBody            String
+  mission              String
+  vision               String
+  stats                Json
+  contactInfo          Json
+  socialLinks          Json
+  footerTagline        String
+  published            Boolean  @default(true)
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+  deletedAt            DateTime?
+
+  @@index([deletedAt, published])
+}
+
+model Service {
+  id               String   @id @default(uuid()) @db.Uuid
+  slug             String   @unique
+  title            String
+  shortDescription String
+  description      String
+  icon             String
+  coverImage       String
+  capabilities     String[]
+  deliverables     String[]
+  featured         Boolean  @default(false)
+  order            Int      @default(0)
+  published        Boolean  @default(true)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  deletedAt        DateTime?
+
+  @@index([deletedAt, published, order])
+}
+
+model Case {
+  id          String   @id @default(uuid()) @db.Uuid
+  slug        String   @unique
+  title       String
+  client      String
+  industry    String
+  year        Int
+  summary     String
+  description String
+  coverImage  String
+  techStack   String[]
+  highlights  String[]
+  results     Json
+  featured    Boolean  @default(false)
+  order       Int      @default(0)
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  deletedAt   DateTime?
+
+  @@index([deletedAt, published, order])
+}
+
+model TeamMember {
+  id          String   @id @default(uuid()) @db.Uuid
+  slug        String   @unique
+  name        String
+  role        String
+  bio         String
+  avatar      String
+  expertise   String[]
+  socialLinks Json
+  featured    Boolean  @default(false)
+  order       Int      @default(0)
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  deletedAt   DateTime?
+
+  @@index([deletedAt, published, order])
+}
+
+model BlogPost {
+  id             String   @id @default(uuid()) @db.Uuid
+  slug           String   @unique
+  title          String
+  excerpt        String
+  coverImage     String
+  author         String
+  category       String
+  tags           String[]
+  content        String
+  readingMinutes Int
+  publishedAt    DateTime
+  featured       Boolean  @default(false)
+  order          Int      @default(0)
+  published      Boolean  @default(true)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  deletedAt      DateTime?
+
+  @@index([deletedAt, published, publishedAt])
+  @@index([category, deletedAt, published])
+}
+
+model ContactMessage {
+  id        String        @id @default(uuid()) @db.Uuid
+  name      String
+  email     String
+  phone     String?
+  company   String?
+  subject   String?
+  message   String
+  status    ContactStatus @default(NEW)
+  ipAddress String?
+  userAgent String?
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+  deletedAt DateTime?
+
+  @@index([status, deletedAt, createdAt])
+}

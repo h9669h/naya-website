@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="72" y1="32" x2="1142" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#080F26"/>
+      <stop offset=".55" stop-color="#152246"/>
+      <stop offset="1" stop-color="#29214D"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(974 259) rotate(132) scale(516 453)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A681FF" stop-opacity=".4"/>
+      <stop offset="1" stop-color="#A681FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mark" x1="454" y1="171" x2="586" y2="336" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white"/>
+      <stop offset="1" stop-color="#DDCEFF"/>
+    </linearGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" stroke="white" stroke-opacity=".045"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" rx="32" fill="url(#bg)"/>
+  <rect width="1200" height="630" rx="32" fill="url(#glow)"/>
+  <rect width="1200" height="630" rx="32" fill="url(#grid)"/>
+  <circle cx="1014" cy="280" r="188" stroke="white" stroke-opacity=".08"/>
+  <circle cx="1014" cy="280" r="126" stroke="#C3A8FF" stroke-opacity=".16" stroke-dasharray="6 10"/>
+  <circle cx="1014" cy="280" r="78" fill="white" fill-opacity=".04" stroke="white" stroke-opacity=".12"/>
+  <rect x="67" y="62" width="72" height="72" rx="21" fill="#7541E8"/>
+  <path d="M87 112V84L119 112V84" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="161" y="108" fill="white" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700" letter-spacing="5">NOVA CORP</text>
+  <text x="70" y="290" fill="#DDCEFF" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="600" letter-spacing="6">TECHNOLOGY · PARTNERSHIP · IMPACT</text>
+  <text x="67" y="382" fill="white" font-family="Inter,Arial,sans-serif" font-size="76" font-weight="700">Build what</text>
+  <text x="67" y="467" fill="#C3A8FF" font-family="Inter,Arial,sans-serif" font-size="76" font-weight="700">comes next.</text>
+  <path d="M876 288L1014 180L1152 288L1014 396L876 288Z" stroke="url(#mark)" stroke-width="3" stroke-opacity=".35"/>
+  <path d="M949 337V238L1079 337V238" stroke="url(#mark)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="70" y="558" width="310" height="2" rx="1" fill="#A681FF"/>
+  <circle cx="410" cy="559" r="4" fill="#C3A8FF"/>
+</svg>

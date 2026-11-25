@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 250 43% 98%;
+    --foreground: 229 40% 13%;
+    --card: 0 0% 100%;
+    --card-foreground: 229 40% 13%;
+    --primary: 258 76% 56%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 258 58% 94%;
+    --secondary-foreground: 257 45% 30%;
+    --muted: 240 22% 95%;
+    --muted-foreground: 229 13% 45%;
+    --accent: 258 65% 94%;
+    --accent-foreground: 257 45% 30%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 20% 89%;
+    --input: 240 20% 87%;
+    --ring: 258 76% 56%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 230 44% 7%;
+    --foreground: 240 25% 93%;
+    --card: 230 36% 11%;
+    --card-foreground: 240 25% 93%;
+    --primary: 258 86% 72%;
+    --primary-foreground: 230 44% 9%;
+    --secondary: 231 28% 17%;
+    --secondary-foreground: 250 35% 88%;
+    --muted: 230 25% 16%;
+    --muted-foreground: 235 15% 66%;
+    --accent: 238 35% 19%;
+    --accent-foreground: 250 35% 90%;
+    --destructive: 0 75% 65%;
+    --destructive-foreground: 230 44% 9%;
+    --border: 231 24% 20%;
+    --input: 231 24% 23%;
+    --ring: 258 86% 72%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 96px;
+  }
+
+  body {
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    @apply bg-primary/25 text-foreground;
+  }
+
+  button,
+  [role='button'] {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+
+  :focus-visible {
+    outline-color: hsl(var(--ring));
+  }
+}
+
+@layer components {
+  .prose-nova {
+    @apply text-[15px] leading-8 text-foreground/85 sm:text-base sm:leading-8;
+  }
+
+  .prose-nova > :first-child {
+    @apply mt-0;
+  }
+
+  .prose-nova h1,
+  .prose-nova h2,
+  .prose-nova h3,
+  .prose-nova h4 {
+    @apply mb-4 mt-10 font-semibold tracking-tight text-foreground;
+    scroll-margin-top: 110px;
+  }
+
+  .prose-nova h1 {
+    @apply text-3xl;
+  }
+
+  .prose-nova h2 {
+    @apply border-b border-border/70 pb-3 text-2xl;
+  }
+
+  .prose-nova h3 {
+    @apply text-xl;
+  }
+
+  .prose-nova h4 {
+    @apply text-lg;
+  }
+
+  .prose-nova p {
+    @apply my-5;
+  }
+
+  .prose-nova ul,
+  .prose-nova ol {
+    @apply my-5 space-y-2 pl-6;
+  }
+
+  .prose-nova ul {
+    @apply list-disc;
+  }
+
+  .prose-nova ol {
+    @apply list-decimal;
+  }
+
+  .prose-nova li::marker {
+    @apply text-primary;
+  }
+
+  .prose-nova blockquote {
+    @apply my-7 rounded-r-xl border-l-4 border-primary bg-primary/5 px-5 py-1 text-muted-foreground;
+  }
+
+  .prose-nova blockquote p {
+    @apply my-4;
+  }
+
+  .prose-nova code {
+    @apply rounded-md bg-muted px-1.5 py-0.5 font-mono text-[0.875em] text-primary;
+  }
+
+  .prose-nova pre {
+    @apply my-7 overflow-x-auto rounded-2xl bg-navy-950 p-5 text-sm leading-7 text-white/85;
+  }
+
+  .prose-nova pre code {
+    @apply bg-transparent p-0 text-inherit;
+  }
+
+  .prose-nova hr {
+    @apply my-10 border-border;
+  }
+
+  .prose-nova table {
+    @apply w-full min-w-[560px] border-collapse text-left text-sm;
+  }
+
+  .prose-nova th,
+  .prose-nova td {
+    @apply border-b border-border px-4 py-3;
+  }
+
+  .prose-nova th {
+    @apply bg-muted/60 font-semibold;
+  }
+
+  .map-grid {
+    background-image:
+      linear-gradient(
+        33deg,
+        transparent 46%,
+        hsl(var(--border)) 47%,
+        hsl(var(--border)) 48%,
+        transparent 49%
+      ),
+      linear-gradient(
+        -24deg,
+        transparent 45%,
+        hsl(var(--border)) 46%,
+        hsl(var(--border)) 47%,
+        transparent 48%
+      ),
+      linear-gradient(90deg, hsl(var(--border) / 0.45) 1px, transparent 1px),
+      linear-gradient(hsl(var(--border) / 0.45) 1px, transparent 1px);
+    background-size:
+      110px 90px,
+      150px 120px,
+      44px 44px,
+      44px 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
